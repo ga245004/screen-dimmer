@@ -1,4 +1,4 @@
-package com.codenvy.template.android;
+package com.appliver.screenDimmer;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(com.codenvy.template.android.R.menu.main, menu);
+        getMenuInflater().inflate(com.appliver.screenDimmer.R.menu.main, menu);
         return true;
     }
 
