@@ -10,7 +10,7 @@ Android Hello World Application
 
 FROM [codenvy/ubuntu_android](https://hub.docker.com/r/codenvy/ubuntu_android/)
 
-# How to run
+# How to run test
 
 1. Project build is started automatically when a workspace starts. Click the Preview URL, right click on the gray screen to call a context menu and launch the Emulator. It may take a while.
 ![Alt text](https://raw.githubusercontent.com/ddementieva/android-images/master/images/context-menu.png "Context menu")
