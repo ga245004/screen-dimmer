@@ -1,4 +1,20 @@
-# mobile-android-hello-world
+# main cmds
+
+
+ssh-keygen -t rsa -b 4096 -C "gauravmaheshwari57@gmail"
+path /home/user/.ssh/id_rsa
+
+pass 12345
+
+ssh-add /home/user/.ssh/id_rsa.pub
+
+cat /home/user/.ssh/id_rsa.pub
+
+
+git add --all
+git commit -m "new changes"
+git push origin master
+
 
 Android Hello World Application
 
