@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.Toast;
+import com.splunk.mint.Mint;
 
 public class OverlayShowingService extends Service implements OnTouchListener, OnClickListener {
     
@@ -27,6 +28,7 @@ public class OverlayShowingService extends Service implements OnTouchListener, O
     private int originalYPos;
     private boolean moving;
     private WindowManager wm;
+    
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -36,6 +38,8 @@ public class OverlayShowingService extends Service implements OnTouchListener, O
     @Override
     public void onCreate() {
 	super.onCreate();
+
+     String txID = Mint.transactionStart("Starting OverlayShowingService.."); 
 
 	wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
 
@@ -60,6 +64,8 @@ public class OverlayShowingService extends Service implements OnTouchListener, O
 	topLeftParams.width = 0;
 	topLeftParams.height = 0;
 	wm.addView(topLeftView, topLeftParams);
+
+    Mint.transactionStop(txID);
 
     }
 

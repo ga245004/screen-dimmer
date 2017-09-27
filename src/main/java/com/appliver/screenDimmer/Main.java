@@ -3,6 +3,7 @@ package com.appliver.screenDimmer;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import com.splunk.mint.Mint;
 
 public class Main  extends Activity {
     
@@ -10,11 +11,10 @@ public class Main  extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        String a = null;
-        a.toString();
-        
+        String txID = Mint.transactionStart("Starting Main Activity..");        
         Intent svc = new Intent(this, OverlayShowingService.class);
         startService(svc);
         finish();
+        Mint.transactionStop(txID);
     }
 }
