@@ -17,4 +17,10 @@ public class Main  extends Activity {
         finish();
         Mint.transactionStop(txID);
     }
+    
+    
+    public void onStop() {
+        super.onStop();
+        Mint.flush();
+    }
 }
