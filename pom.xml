@@ -17,9 +17,9 @@
 
 <repositories>
     <repository>
-        <id>Splunk MINT repo</id>
-        <name>The Splunk MINT Repository</name>
-        <url>file:///projects/screenDimmer/localrepo/mint-plugin-repo-5.5.2</url>
+        <id>loclrepo</id>
+        <name>Local Repository</name>
+        <url>file:///projects/screenDimmer/localrepo/</url>
     </repository>
  </repositories>
 
@@ -32,10 +32,10 @@
         </dependency>
         
         <dependency>
-        <groupId>com.splunk.mint</groupId>
-        <artifactId>mint</artifactId>
-        <version>5.2.2</version>
-    </dependency>
+            <groupId>com.splunk.mint</groupId>
+            <artifactId>mint</artifactId>
+            <version>5.2.2</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
